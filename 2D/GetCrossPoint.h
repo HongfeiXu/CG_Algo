@@ -96,6 +96,7 @@ bool IsLineSegmentCross(const Point &p1, const Point &p2, const Point &q1, const
 
 // 求线段 P1P2 与 Q1Q2 的交点。
 // 先进行快速排斥实验和跨立实验确定有交点在进行计算。
+// 列点斜式方程来完成。但由于点斜式方程难以处理斜率为0的特殊情况，不方便求解。因而，参用向量法求解交点。
 // 交点 crossPoint 使用引用返回。
 bool GetCrossPoint2D(const Point &p1, const Point &p2, const Point &q1, const Point &q2, Point &crossPoint)
 {
